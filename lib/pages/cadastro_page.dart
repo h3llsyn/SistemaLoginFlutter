@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
-class CadastroPage extends StatelessWidget {
+class CadastroPage extends StatefulWidget {
   const CadastroPage({super.key});
 
   @override
+  State<CadastroPage> createState() => _CadastroPageState();
+}
+
+class _CadastroPageState extends State<CadastroPage> {
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Criar usuário'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Text(
+          'Cadastro de usuário'
+        ),
+      ),
+    );
   }
 }
