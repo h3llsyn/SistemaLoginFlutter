@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:sistema_login/dados_mock.dart';
 import 'package:sistema_login/pages/cadastro_page.dart';
@@ -69,6 +67,14 @@ class _LoginPageState extends State<LoginPage> {
         builder: (context) => CadastroPage()
       )
     );
+  }
+
+  @override
+  void dispose(){
+    emailController.dispose();
+    senhaController.dispose();
+
+    super.dispose();
   }
 
   @override
